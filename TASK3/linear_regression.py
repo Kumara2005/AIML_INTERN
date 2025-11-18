@@ -1,6 +1,6 @@
 # ============================================
 #   TASK 3 — LINEAR REGRESSION (Python Script)
-#   Works with housing.csv (your dataset)
+#   Works with housing.csv
 # ============================================
 
 import pandas as pd
