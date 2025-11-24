@@ -22,9 +22,7 @@ The main objective of this project is to clean and preprocess the Student Perfor
 - **Python 3.8+** - Core programming language
 - **Pandas** - Data manipulation and analysis
 - **NumPy** - Numerical computing
-- **Matplotlib** - Data visualization
-- **Seaborn** - Statistical data visualization
-- **Scikit-learn** - Machine learning utilities and preprocessing
+- **Scikit-learn** - Feature scaling and preprocessing
 
 ## 📁 Project Structure
 
@@ -34,6 +32,7 @@ TASK1/
 ├── StudentsPerformance.csv          # Original dataset
 ├── datacleaning.py                  # Main data cleaning script
 ├── cleaned_students_data.csv        # Cleaned and processed dataset
+├── .gitignore                       # Git ignore rules
 └── README.md                        # Project documentation
 ```
 
@@ -76,7 +75,7 @@ TASK1/
 
 4. **Install required dependencies**
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn
+   pip install pandas numpy scikit-learn
    ```
 
 5. **Run the data cleaning script**
@@ -108,11 +107,11 @@ The cleaning pipeline follows these steps:
 
 1. **Data Loading** - Import the raw Student Performance dataset
 2. **Initial Inspection** - Display dataset info, shape, and summary statistics
-3. **Missing Value Analysis** - Identify and handle null values
-4. **Duplicate Removal** - Detect and eliminate duplicate records
-5. **Outlier Detection** - Use IQR method to identify outliers in numerical columns
-6. **Outlier Treatment** - Handle outliers using capping or removal techniques
-7. **Data Export** - Save the cleaned dataset to CSV format
+3. **Missing Value Analysis** - Identify and handle null values (fill with mode for categorical, mean for numerical)
+4. **Categorical Encoding** - Convert categorical variables to binary features using one-hot encoding
+5. **Outlier Detection & Removal** - Use IQR method to identify and remove outliers in score columns
+6. **Feature Scaling** - Apply standardization to numerical score columns using StandardScaler
+7. **Data Export** - Save the cleaned and processed dataset to CSV format
 
 ## 👤 Author
 
